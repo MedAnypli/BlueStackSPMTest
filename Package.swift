@@ -12,7 +12,7 @@ let package = Package(
             targets: ["BlueStackSDK",
                       "OMSDK_Madvertise",
                       "BlueStackAdColonyAdapter",
-                      "BluestackAmazonPublisherServicesAdapter",
+//                      "BluestackAmazonPublisherServicesAdapter",
                       "BluestackCriteoAdapter",
                       "BlueStackDFPAdapter",
                       "BlueStackFacebookAdapter",
@@ -23,9 +23,9 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
 //         .package(url: /* package url */, from: "1.0.0"),
-//        .package(url: "https://github.com/facebook/facebook-ios-sdk", exact: "14.0.0"),
-//        .package(url: "https://github.com/criteo/ios-publisher-sdk", exact: "4.5.0"),
-//        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", exact: "9.9.0")
+        .package(url: "https://github.com/facebook/facebook-ios-sdk", exact: "14.0.0"),
+        .package(url: "https://github.com/criteo/ios-publisher-sdk", exact: "4.5.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads", exact: "9.9.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -33,7 +33,7 @@ let package = Package(
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
-        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
+//        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
