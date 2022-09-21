@@ -16,3 +16,4 @@ FOUNDATION_EXPORT const unsigned char BlueStackDFPAdapterVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <BlueStackDFPAdapter/PublicHeader.h>
 
 
+#import <BlueStackDFPAdapter/MNGDFPAdapter.h>

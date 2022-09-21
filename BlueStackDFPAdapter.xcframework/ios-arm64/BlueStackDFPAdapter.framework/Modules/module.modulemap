@@ -6,6 +6,6 @@ framework module BlueStackDFPAdapter {
 }
 
 module BlueStackDFPAdapter.Swift {
-    header "BlueStackDFPAdapter-Swift.h"
-    requires objc
+  header "BlueStackDFPAdapter-Swift.h"
+  requires objc
 }
