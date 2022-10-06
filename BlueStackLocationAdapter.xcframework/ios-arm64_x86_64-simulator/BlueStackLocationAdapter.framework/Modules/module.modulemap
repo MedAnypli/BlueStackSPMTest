@@ -6,6 +6,6 @@ framework module BlueStackLocationAdapter {
 }
 
 module BlueStackLocationAdapter.Swift {
-    header "BlueStackLocationAdapter-Swift.h"
-    requires objc
+  header "BlueStackLocationAdapter-Swift.h"
+  requires objc
 }

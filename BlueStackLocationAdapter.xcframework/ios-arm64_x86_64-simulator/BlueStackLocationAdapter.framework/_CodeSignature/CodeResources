@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/BlueStackLocationAdapter-Swift.h</key>
 		<data>
-		WWjy0LMb2OpOUq8CSRJ3bch65BE=
+		QLOZgxM+oHMgsdwyy0zMnYDU07o=
 		</data>
 		<key>Headers/BlueStackLocationAdapter.h</key>
 		<data>
@@ -14,35 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TDcxWxDpLXFPMtNg14Hsr4U4vw8=
+		wYq3LALbQAmR1mSALia6C2ErvdQ=
+		</data>
+		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		ogiIP2p090B37tcB7E6T9MLwo0Y=
+		</data>
+		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		g+906DVRRiEuBCnDTRPMk8phZ94=
 		</data>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		XiF0pg5zCFwfCG2f4nC5213s5zM=
+		7nnDfN0GQzKPdwmdh68nqLG32JA=
 		</data>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UkuMqCKfJvcebfqCYgZW7OZh9os=
+		g+906DVRRiEuBCnDTRPMk8phZ94=
 		</data>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rnFy0/6MuqKRbb1nA2BH+eVEd7s=
-		</data>
-		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		XiF0pg5zCFwfCG2f4nC5213s5zM=
-		</data>
-		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		UkuMqCKfJvcebfqCYgZW7OZh9os=
-		</data>
-		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		rnFy0/6MuqKRbb1nA2BH+eVEd7s=
+		Xx+aMdn4lyv4KNjQDhD6n5UxyPw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		IqWNMrO6irvo679icYMjpujdBjg=
+		FOemUz1jWh+asveKl3x5NrYl7Q4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RzeBObi+lPrGMUcsYQtvO3fiLXEkBX464L3yP03MlB0=
+			ED9fLHee96gI38JGsHMA1K4qWDav4q9vi0/DyeEqNks=
 			</data>
 		</dict>
 		<key>Headers/BlueStackLocationAdapter.h</key>
@@ -61,53 +57,46 @@
 			4Ee+fFJ6EjpthxV6r7ZgwYyQN3ucoO1ITHCKY8eOJAE=
 			</data>
 		</dict>
+		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9mSBfAMuA0BivjcHiEItwIxeCruGsg0NL692K3oKVjg=
+			</data>
+		</dict>
+		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S7JnE/C0SRufoe9dqHuTSccKQfEEZokdChgyR9zuF3I=
+			</data>
+		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ia5FRfVoghfV/IZ6qh+4k2gaSAHUx2eKt37FSm+1NG0=
+			isCmu5aywvqgjlaYDM+xB3HPjocJwD/4OL+gGXJQi1A=
 			</data>
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/FpjYMfU2zcCSDqwynqcI4aLPwJbS5iqw+Quog81p9Y=
+			S7JnE/C0SRufoe9dqHuTSccKQfEEZokdChgyR9zuF3I=
 			</data>
 		</dict>
 		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KUbjOpbCA6Z6TlTlRMmBuOxrOsJun5Z4X+eZFKeu72c=
-			</data>
-		</dict>
-		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Ia5FRfVoghfV/IZ6qh+4k2gaSAHUx2eKt37FSm+1NG0=
-			</data>
-		</dict>
-		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			/FpjYMfU2zcCSDqwynqcI4aLPwJbS5iqw+Quog81p9Y=
-			</data>
-		</dict>
-		<key>Modules/BlueStackLocationAdapter.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KUbjOpbCA6Z6TlTlRMmBuOxrOsJun5Z4X+eZFKeu72c=
+			ofBd5qP0Gpa5RnqwSbmCI66ZoYZ204Zge3k7b6T7imo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			//2W+v54yHojApxMq6JCuE+S2ZKKNkPjv67sLpjnhnw=
+			mfwQGCiadPct1bH33Fp6Ca+1b1kX6pIyT5K55acjX2Q=
 			</data>
 		</dict>
 	</dict>
