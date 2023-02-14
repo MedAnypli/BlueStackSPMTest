@@ -6,6 +6,6 @@ framework module BlueStackFacebookAdapter {
 }
 
 module BlueStackFacebookAdapter.Swift {
-    header "BlueStackFacebookAdapter-Swift.h"
-    requires objc
+  header "BlueStackFacebookAdapter-Swift.h"
+  requires objc
 }
