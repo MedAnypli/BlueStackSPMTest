@@ -13,9 +13,9 @@ let package = Package(
             targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter"]),
     ],
     dependencies:  [
-        //        .package(url: "https://mdtb-sdk-packages.s3-us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-4.5.6.zip", .exact("4.5.5")),
-        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
-        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
+//        //        .package(url: "https://mdtb-sdk-packages.s3-us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-4.5.6.zip", .exact("4.5.5")),
+//        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
+//        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         
     ],
     targets: [
