@@ -23,9 +23,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
 //        .package(url: "AmazonPublisherServicesSDK", exact:("1.0.0"))
-                .package(url: "https://github.com/facebook/facebook-ios-sdk", exact: "14.0.0"),
-                .package(url: "https://github.com/criteo/ios-publisher-sdk", exact: "4.5.0"),
-                .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: "9.13.0"),
+        .package(name : "amazon-publisher", url: "https://github.com/amzn/amazon-publisher-services-ios.git", .exact("4.5.5"))
 
     ],
     targets: [
@@ -34,12 +32,14 @@ let package = Package(
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
-        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
         .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
+//        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework", dependencies: [
+//                .target(name: "AmazonPublisherServicesSDK")]),
+            .target(name: "BluestackAmazonPublisherServicesAdapter", dependencies: ["amazon-publisher"], path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
     ]
 )
