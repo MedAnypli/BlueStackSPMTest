@@ -21,6 +21,8 @@ let package = Package(
 //        .target(name: "BlueStackSPMTest", dependencies: ["BlueStackSDK","OMSDK_Madvertise", "BluestackAmazonPublisherServicesAdapter", "BlueStackAdColonyAdapter"]),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
+        
+        .target(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
@@ -29,6 +31,5 @@ let package = Package(
         .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
 //        .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
         .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
-        .target(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
     ]
 )
