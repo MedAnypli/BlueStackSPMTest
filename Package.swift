@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlueStackSPMTest",
-            targets: ["BlueStackSDK"]),
+            targets: ["BlueStackSPMTest"]),
     ],
     dependencies:  [
 //        .package(url: "https://mdtb-sdk-packages.s3-us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-4.5.6.zip", .exact("4.5.5")),
@@ -18,7 +18,7 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(name: "BlueStackSDK", dependencies: ["BlueStackSDK","OMSDK_Madvertise", "AmazonPublisherServicesSDK", "AdColony"]),
+        .target(name: "BlueStackSPMTest", dependencies: ["BlueStackSDK","OMSDK_Madvertise", "BluestackAmazonPublisherServicesAdapter", "BlueStackAdColonyAdapter"]),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
