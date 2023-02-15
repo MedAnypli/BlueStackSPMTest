@@ -25,10 +25,7 @@ let package = Package(
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         
-        .target(name: "BlueStackSASAdapter", dependencies : [
-            .product(name: "SmartDisplaySDK", package: "Smart-Display-SDK-iOS"),
-            .product(name: "SmartCoreSDK", package: "Smart-Display-SDK-iOS")]
-                , path: "BlueStackSASAdapter.xcframework"),
+        .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
     
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
