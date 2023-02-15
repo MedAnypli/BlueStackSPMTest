@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlueStackSPMTest",
-            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter"]),
+            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "DTBiOSSDK"]),
     ],
     dependencies:  [
 //        //        .package(url: "https://mdtb-sdk-packages.s3-us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-4.5.6.zip", .exact("4.5.5")),
