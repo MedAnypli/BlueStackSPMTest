@@ -23,7 +23,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
 //        .package(url: "AmazonPublisherServicesSDK", exact:("1.0.0"))
-        .package(name : "amazon-publisher", url: "https://github.com/amzn/amazon-publisher-services-ios.git", .exact("4.5.5"))
+        .package(url: "https://github.com/amzn/amazon-publisher-services-ios.git", from:"4.5.5"),
 
     ],
     targets: [
@@ -38,8 +38,6 @@ let package = Package(
         .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
         .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
-//        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework", dependencies: [
-//                .target(name: "AmazonPublisherServicesSDK")]),
-            .target(name: "BluestackAmazonPublisherServicesAdapter", dependencies: ["amazon-publisher"], path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
+        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
     ]
 )
