@@ -30,7 +30,7 @@ let package = Package(
                 dependencies: [
                        .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                        .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
-                       .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BlueStackSASAdapterWrapper", condition: .when(platforms: [.iOS])),
                        .target(name: "BluestackAmazonPublisherServicesAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackAdColonyAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
@@ -39,7 +39,6 @@ let package = Package(
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .product(name: "FBLPromises", package: "Promises"),
                      ],
-             path: "BlueStackSDKWrapper",
              linkerSettings: [
                .linkedLibrary("sqlite3"),
                .linkedLibrary("c++"),
@@ -49,9 +48,21 @@ let package = Package(
            ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
-        
+         //smart
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
-    
+        .target(name: "BlueStackSASAdapterWrapper",
+                dependencies: [
+                       .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "SASDisplayKit", condition: .when(platforms: [.iOS])),
+                       .target(name: "SCSCoreKit", condition: .when(platforms: [.iOS])),
+                     ],
+             linkerSettings: [
+               .linkedLibrary("sqlite3"),
+               .linkedLibrary("c++"),
+               .linkedLibrary("z"),
+               .linkedFramework("StoreKit"),
+             ]
+           ),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
