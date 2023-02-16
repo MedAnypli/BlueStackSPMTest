@@ -57,6 +57,7 @@ let package = Package(
                        .target(name: "SASDisplayKit", condition: .when(platforms: [.iOS])),
                        .target(name: "SCSCoreKit", condition: .when(platforms: [.iOS])),
                      ],
+             path: "BlueStackSDKWrapper",
              linkerSettings: [
                .linkedLibrary("sqlite3"),
                .linkedLibrary("c++"),
