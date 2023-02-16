@@ -50,8 +50,8 @@ let package = Package(
         .binaryTarget(name: "OMSDK_Ogury", path: "Dependencies/OMSDK_Ogury.xcframework"),
         .binaryTarget(name: "SASDisplayKit", path: "Dependencies/SASDisplayKit.xcframework"),
         .binaryTarget(name: "SCSCoreKit", path: "Dependencies/SCSCoreKit.xcframework"),
-        .target(name: "FBLPromises",
-                dependencies: [.product(name: "FBLPromises", package: "Promises"),],
-                path : "Dependencies/PromisesObjC/Sources/FBLPromises"),
+//        .target(name: "FBLPromises",
+//                dependencies: [.product(name: "FBLPromises", package: "Promises")],
+//              )
     ]
 )
