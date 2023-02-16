@@ -42,7 +42,8 @@ let package = Package(
                        .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackFacebookAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
-                       .product(name: "FBLPromises", package: "Promises"),
+                       .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
+//                       .product(name: "FBLPromises", package: "Promises"),
                      ],
              path: "BlueStackSDKWrapper",
              linkerSettings: [
@@ -52,6 +53,8 @@ let package = Package(
                .linkedFramework("StoreKit"),
              ]
            ),
+        .target(name: "FBLPromises",
+                path : "Dependencies/PromisesObjC/Sources/FBLPromises"),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
          //smart
