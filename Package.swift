@@ -10,14 +10,14 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlueStackSPMTest",
-            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
+            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter", "PromisesObjC","GoogleMobileAds"]),
     ],
     dependencies:  [
 //        //        .package(url: "https://mdtb-sdk-packages.s3-us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-4.5.6.zip", .exact("4.5.5")),
 //        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
 //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
-        .package(url: "https://github.com/google/promises", exact: "2.1.1")
+//        .package(url: "https://github.com/google/promises", exact: "2.1.1")
         
     ],
     targets: [
@@ -49,5 +49,8 @@ let package = Package(
         .binaryTarget(name: "OMSDK_Ogury", path: "Dependencies/OMSDK_Ogury.xcframework"),
         .binaryTarget(name: "SASDisplayKit", path: "Dependencies/SASDisplayKit.xcframework"),
         .binaryTarget(name: "SCSCoreKit", path: "Dependencies/SCSCoreKit.xcframework"),
+        .target(name: "PromisesObjC",
+                dependencies: [],
+                path : "Dependencies/PromisesObjC/Sources/FBLPromises"),
     ]
 )
