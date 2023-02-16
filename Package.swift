@@ -39,6 +39,7 @@ let package = Package(
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .product(name: "FBLPromises", package: "Promises"),
                      ],
+             path: "BlueStackSDKWrapper",
              linkerSettings: [
                .linkedLibrary("sqlite3"),
                .linkedLibrary("c++"),
