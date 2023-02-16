@@ -10,7 +10,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BlueStackSPMTest",
-            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
+            targets: ["BlueStackSDKWrapper"]),
+//            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
     dependencies:  [
 //        //        .package(url: "https://mdtb-sdk-packages.s3-us-west-2.amazonaws.com/iOS_APS_SDK/APS_iOS_SDK-4.5.6.zip", .exact("4.5.5")),
@@ -25,6 +26,33 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         //        .target(name: "BlueStackSPMTest", dependencies: ["BlueStackSDK","OMSDK_Madvertise", "BluestackAmazonPublisherServicesAdapter", "BlueStackAdColonyAdapter"]),
+        .target(name: "BlueStackSDKWrapper",
+                dependencies: [
+                       .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
+                       .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
+                       .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BluestackAmazonPublisherServicesAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BlueStackAdColonyAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BlueStackFacebookAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
+                       "FirebaseCore",
+                       "FirebaseInstallations",
+                       "GoogleUtilities_AppDelegateSwizzler",
+                       "GoogleUtilities_MethodSwizzler",
+                       "GoogleUtilities_NSData",
+                       "GoogleUtilities_Network",
+                       .product(name: "FBLPromises", package: "Promises"),
+                     ],
+             path: "BlueStackSDKWrapper",
+             linkerSettings: [
+               .linkedLibrary("sqlite3"),
+               .linkedLibrary("c++"),
+               .linkedLibrary("z"),
+               .linkedFramework("StoreKit"),
+             ]
+           ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         
