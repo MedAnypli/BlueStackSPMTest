@@ -18,6 +18,7 @@ let package = Package(
 //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
 //        .package(url: "https://github.com/google/promises", exact: "2.1.1")
+        .package(name: "Promises", url: "https://github.com/google/promises.git", "1.2.8" ..< "1.3.0"),
         
     ],
     targets: [
@@ -50,7 +51,7 @@ let package = Package(
         .binaryTarget(name: "SASDisplayKit", path: "Dependencies/SASDisplayKit.xcframework"),
         .binaryTarget(name: "SCSCoreKit", path: "Dependencies/SCSCoreKit.xcframework"),
         .target(name: "FBLPromises",
-                dependencies: [],
+                dependencies: [.product(name: "FBLPromises", package: "Promises"),],
                 path : "Dependencies/PromisesObjC/Sources/FBLPromises"),
     ]
 )
