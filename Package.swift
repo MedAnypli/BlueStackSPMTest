@@ -42,6 +42,9 @@ let package = Package(
              path: "BlueStackSDKWrapper",
              linkerSettings: [
                .linkedLibrary("sqlite3"),
+               .linkedLibrary("SASDisplayKit"),
+               .linkedLibrary("SCSCoreKit"),
+               .linkedLibrary("DTBiOSSDK"),
                .linkedLibrary("c++"),
                .linkedLibrary("z"),
                .linkedFramework("StoreKit"),
