@@ -48,8 +48,7 @@ let package = Package(
                        //dfp
                        .target(
                         name: "BlueStackDFPAdapter",
-                        condition: .when(platforms: [.iOS]),
-                        dependencies : ["PromisesObjC"]
+                        condition: .when(platforms: [.iOS])
                        ),
 //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
 //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
