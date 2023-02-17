@@ -53,7 +53,7 @@ let package = Package(
 //                       .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
 //                       .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
 //                       .target(name: "nanopb", condition: .when(platforms: [.iOS])),
-//                       .target(name: "PromisesObjC", condition: .when(platforms: [.iOS])),
+                       .target(name: "PromisesObjC", condition: .when(platforms: [.iOS])),
 //                       .target(name: "UserMessagingPlatform", condition: .when(platforms: [.iOS])),
                        //ogury
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
@@ -84,7 +84,7 @@ let package = Package(
         .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
 //        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
 //        .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
-//        .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
+        .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
 //        .binaryTarget(name: "UserMessagingPlatform", path: "Dependencies/UserMessagingPlatform.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
