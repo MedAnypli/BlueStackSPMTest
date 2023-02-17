@@ -39,9 +39,12 @@ let package = Package(
                        .target(name: "DTBiOSSDK", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackAdColonyAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
+                       //dfp : fbpromises
 //                       .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackFacebookAdapter", condition: .when(platforms: [.iOS])),
+                       //ogury
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
+                       .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
                        .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
 //                       .product(name: "FBLPromises", package: "Promises"),
                      ],
