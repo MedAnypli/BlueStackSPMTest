@@ -26,12 +26,12 @@ let package = Package(
         .package(
             name: "GoogleUserMessagingPlatform",
             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
-            from: "1.1.0"
+            "1.1.0"..<"3.0.0"
         ),
         .package(
             name: "Promises",
             url: "https://github.com/google/promises",
-            "1.1.0"..<"3.0.0"
+            from: "1.1.0"
         )
 //        .package(
 //            name: "FBLPromises",
