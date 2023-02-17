@@ -59,7 +59,16 @@ let package = Package(
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
+        //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
+        .binaryTarget(name: "GoogleAppMeasurement", path: "Dependencies/Google/GoogleAppMeasurement.xcframework"),
+        .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "Dependencies/Google/GoogleAppMeasurementIdentitySupport.xcframework"),
+        .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/Google/GoogleMobileAds.xcframework"),
+        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/Google/GoogleUtilities.xcframework"),
+        .binaryTarget(name: "nanopb", path: "Dependencies/Google/nanopb.xcframework"),
+        .binaryTarget(name: "PromisesObjC", path: "Dependencies/Google/PromisesObjC.xcframework"),
+        .binaryTarget(name: "UserMessagingPlatform", path: "Dependencies/Google/UserMessagingPlatform.xcframework"),
+        //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
         .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
