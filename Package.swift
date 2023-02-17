@@ -82,8 +82,7 @@ let package = Package(
                     .linkedLibrary("sqlite3"),
                     .linkedLibrary("c++"),
                     .linkedLibrary("z"),
-                    .linkedFramework("StoreKit"),
-                    .linkedFramework("Promises"),
+                    .linkedFramework("StoreKit")
                 ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
