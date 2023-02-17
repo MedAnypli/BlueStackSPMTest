@@ -105,8 +105,8 @@ let package = Package(
                     .linkedLibrary("sqlite3")
                 ]
                ),
-        .target(name: "FBLPromises",
-                path: "Dependencies/FBLPromises"
+        .binaryTarget(name: "FBLPromises",
+                path: "Dependencies/PromisesObjC"
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
