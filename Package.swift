@@ -65,6 +65,10 @@ let package = Package(
                         name: "BlueStackDFPAdapter",
                         condition: .when(platforms: [.iOS])
                     ),
+                    .target(
+                        name: "FBLPromises",
+                        condition: .when(platforms: [.iOS])
+                    ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
@@ -101,6 +105,9 @@ let package = Package(
                     .linkedLibrary("z"),
                     .linkedLibrary("sqlite3")
                 ]
+               ),
+        .target(name: "FBLPromises",
+                path: "Dependencies/FBL"
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
