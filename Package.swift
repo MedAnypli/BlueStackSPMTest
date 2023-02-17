@@ -18,14 +18,11 @@ let package = Package(
 //        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
 //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
-        .package(url: "https://github.com/google/promises.git", exact: "1.2.12"),
-//        .package(name: "Promises", url: "https://github.com/google/promises.git", "1.2.8" ..< "1.3.0"),
-        
+//        .package(url: "https://github.com/google/promises.git", exact: "1.2.12"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        //        .target(name: "BlueStackSPMTest", dependencies: ["BlueStackSDK","OMSDK_Madvertise", "BluestackAmazonPublisherServicesAdapter", "BlueStackAdColonyAdapter"]),
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
                        .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
@@ -56,8 +53,6 @@ let package = Package(
                .linkedFramework("StoreKit"),
              ]
            ),
-        .target(name: "FBLPromises",
-                path : "Dependencies/PromisesObjC/Sources/FBLPromises"),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
          //smart
