@@ -58,7 +58,7 @@ let package = Package(
                        //ogury
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
-//                       .product(name: "FBLPromises", package: "Promises"),
+                       .product(name: "FBLPromises", package: "Promises"),
                        .product(name: "GoogleAppMeasurement",
                                 package: "GoogleAppMeasurement"),
                            .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
