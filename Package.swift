@@ -27,7 +27,7 @@ let package = Package(
             name: "GoogleUserMessagingPlatform",
             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
             "1.1.0"..<"3.0.0"
-        ),
+        )
 //        .package(
 //            name: "FBLPromises",
 //            url: "https://github.com/google/promises/",
@@ -67,8 +67,8 @@ let package = Package(
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
                     .product(name: "GoogleAppMeasurement",
                              package: "GoogleAppMeasurement"),
-                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
-                    .product(name: "FBLPromises", package: "FBLPromises")
+                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform")
+//                    .product(name: "FBLPromises", package: "FBLPromises")
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
@@ -76,6 +76,7 @@ let package = Package(
                     .linkedLibrary("c++"),
                     .linkedLibrary("z"),
                     .linkedFramework("StoreKit"),
+                    .linkedLibrary("FBLPromises"),
                 ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
