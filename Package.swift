@@ -76,7 +76,6 @@ let package = Package(
                     .linkedLibrary("c++"),
                     .linkedLibrary("z"),
                     .linkedFramework("StoreKit"),
-                    .linkedLibrary("FBLPromises"),
                 ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
