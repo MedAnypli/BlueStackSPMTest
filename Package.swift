@@ -65,9 +65,6 @@ let package = Package(
                         name: "BlueStackDFPAdapter",
                         condition: .when(platforms: [.iOS])
                     ),
-                    .target(
-                        name: "FBLPromises"
-                    ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
@@ -121,7 +118,7 @@ let package = Package(
             .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
         //        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
         //        .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
-//            .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
+            .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
         //        .binaryTarget(name: "UserMessagingPlatform", path: "Dependencies/UserMessagingPlatform.xcframework"),
         //fb
             .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
