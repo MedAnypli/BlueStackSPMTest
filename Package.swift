@@ -26,7 +26,7 @@ let package = Package(
         .package(
             name: "GoogleUserMessagingPlatform",
             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
-            "1.1.0"..<"3.0.0"
+            from: "1.1.0"
         ),
         .package(
             name: "Promises",
@@ -83,6 +83,7 @@ let package = Package(
                     .linkedLibrary("c++"),
                     .linkedLibrary("z"),
                     .linkedFramework("StoreKit"),
+                    .linkedFramework("FBLPromises"),
                 ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
