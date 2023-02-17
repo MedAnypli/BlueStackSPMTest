@@ -107,7 +107,7 @@ let package = Package(
                 ]
                ),
         .target(name: "FBLPromises",
-                path: "Dependencies/FBL"
+                path: "Dependencies/FBLPromises"
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
@@ -142,8 +142,3 @@ let package = Package(
         .binaryTarget(name: "SCSCoreKit", path: "Dependencies/SCSCoreKit.xcframework"),
     ]
 )
-
-
-//        .target(name: "FBLPromises",
-//                dependencies: [.product(name: "FBLPromises", package: "Promises")],
-//              )
