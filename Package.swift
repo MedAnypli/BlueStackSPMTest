@@ -42,7 +42,6 @@ let package = Package(
                        //ogury
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
-                       .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
 //                       .product(name: "FBLPromises", package: "Promises"),
                      ],
              path: "BlueStackSDKWrapper",
@@ -77,7 +76,6 @@ let package = Package(
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
         .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
-        .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
         .binaryTarget(name: "ImproveDigital", path: "Dependencies/ImproveDigital.xcframework"),
         .binaryTarget(name: "MAdvertiseLocation", path: "Dependencies/MAdvertiseLocation.xcframework"),
         .binaryTarget(name: "OguryAds", path: "Dependencies/OguryAds.xcframework"),
