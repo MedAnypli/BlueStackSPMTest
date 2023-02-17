@@ -39,7 +39,7 @@ let package = Package(
                        .target(name: "DTBiOSSDK", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackAdColonyAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
-                       .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+//                       .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackFacebookAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
