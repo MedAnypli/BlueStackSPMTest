@@ -18,21 +18,21 @@ let package = Package(
         //        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
         //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
-        .package(
-            name: "GoogleAppMeasurement",
-            url: "https://github.com/google/GoogleAppMeasurement.git",
-            "7.0.0"..<"11.0.0"
-        ),
-        .package(
-            name: "GoogleUserMessagingPlatform",
-            url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
-            "1.1.0"..<"3.0.0"
-        ),
-        .package(
-            name: "Promises",
-            url: "https://github.com/google/promises",
-            from: "1.1.0"
-        )
+//        .package(
+//            name: "GoogleAppMeasurement",
+//            url: "https://github.com/google/GoogleAppMeasurement.git",
+//            "7.0.0"..<"11.0.0"
+//        ),
+//        .package(
+//            name: "GoogleUserMessagingPlatform",
+//            url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+//            "1.1.0"..<"3.0.0"
+//        ),
+//        .package(
+//            name: "Promises",
+//            url: "https://github.com/google/promises",
+//            from: "1.1.0"
+//        )
 //        .package(
 //            name: "FBLPromises",
 //            url: "https://github.com/google/promises/",
@@ -75,11 +75,11 @@ let package = Package(
                     //ogury
                         .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
-                    .product(name: "GoogleAppMeasurement",
-                             package: "GoogleAppMeasurement"),
-                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
-                    .product(name: "Promises",
-                             package: "Promises"),
+//                    .product(name: "GoogleAppMeasurement",
+//                             package: "GoogleAppMeasurement"),
+//                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
+//                    .product(name: "Promises",
+//                             package: "Promises"),
 //                    .product(name: "FBLPromises", package: "FBLPromises")
                 ],
                 path: "BlueStackSDKWrapper",
