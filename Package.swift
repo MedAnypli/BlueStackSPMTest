@@ -59,6 +59,7 @@ let package = Package(
                     .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
                     //location
                     .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
+                    .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
                     //dfp
 //                    .target(
 //                        name: "BlueStackDFPAdapter",
