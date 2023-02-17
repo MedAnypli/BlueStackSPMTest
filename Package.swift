@@ -18,7 +18,10 @@ let package = Package(
 //        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
 //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
-//        .package(url: "https://github.com/google/promises.git", exact: "1.2.12"),
+        .package(
+            name: "FBLPromises" ,
+            url: "https://github.com/google/promises.git",
+            "1.2.12"),
         .package(
              name: "GoogleAppMeasurement",
              url: "https://github.com/google/GoogleAppMeasurement.git",
@@ -58,7 +61,7 @@ let package = Package(
                        //ogury
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
-                       .product(name: "FBLPromises", package: "Promises"),
+                       .product(name: "FBLPromises", package: "FBLPromises"),
                        .product(name: "GoogleAppMeasurement",
                                 package: "GoogleAppMeasurement"),
                            .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
