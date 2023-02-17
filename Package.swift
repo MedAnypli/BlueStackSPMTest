@@ -18,8 +18,8 @@ let package = Package(
 //        .package(url: "https://github.com/BlueStack-SDK/Core", from: "1.0.0"),
 //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
-//        .package(url: "https://github.com/google/promises", exact: "2.1.1")
-        .package(name: "Promises", url: "https://github.com/google/promises.git", "1.2.8" ..< "1.3.0"),
+        .package(url: "https://github.com/google/promises.git", exact: "1.2.12"),
+//        .package(name: "Promises", url: "https://github.com/google/promises.git", "1.2.8" ..< "1.3.0"),
         
     ],
     targets: [
