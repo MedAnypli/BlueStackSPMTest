@@ -63,8 +63,7 @@ let package = Package(
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
                     .product(name: "GoogleAppMeasurement",
                              package: "GoogleAppMeasurement"),
-                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
-                    .product(name: "FBLPromises", package: "FBLPromises")
+                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform")
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
