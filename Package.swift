@@ -84,10 +84,22 @@ let package = Package(
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
-                    .linkedLibrary("sqlite3"),
-                    .linkedLibrary("c++"),
+                    .linkedFramework("AudioToolbox"),
+                    .linkedFramework("AVFoundation"),
+                    .linkedFramework("CFNetwork"),
+                    .linkedFramework("CoreGraphics"),
+                    .linkedFramework("CoreMedia"),
+                    .linkedFramework("CoreTelephony"),
+                    .linkedFramework("CoreVideo"),
+                    .linkedFramework("MediaPlayer"),
+                    .linkedFramework("MessageUI"),
+                    .linkedFramework("MobileCoreServices"),
+                    .linkedFramework("QuartzCore"),
+                    .linkedFramework("Security"),
+                    .linkedFramework("StoreKit"),
+                    .linkedFramework("SystemConfiguration"),
                     .linkedLibrary("z"),
-                    .linkedFramework("StoreKit")
+                    .linkedLibrary("sqlite3")
                 ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
