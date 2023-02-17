@@ -106,7 +106,7 @@ let package = Package(
                 ]
                ),
         .binaryTarget(name: "FBLPromises",
-                path: "Dependencies/PromisesObjC.xcframework"
+                path: "Dependencies/FBLPromises.xcframework"
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
