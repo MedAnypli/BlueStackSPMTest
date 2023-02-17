@@ -53,8 +53,12 @@ let package = Package(
                     //amazon
                     .target(name: "BluestackAmazonPublisherServicesAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "DTBiOSSDK", condition: .when(platforms: [.iOS])),
+                    //adcolony
                     .target(name: "BlueStackAdColonyAdapter", condition: .when(platforms: [.iOS])),
+                    //criteo
                     .target(name: "BluestackCriteoAdapter", condition: .when(platforms: [.iOS])),
+                    //location
+                    .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
                     //dfp
 //                    .target(
 //                        name: "BlueStackDFPAdapter",
