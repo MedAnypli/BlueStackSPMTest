@@ -61,10 +61,10 @@ let package = Package(
                     .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
                     //dfp
-                    .target(
-                        name: "BlueStackDFPAdapter",
-                        condition: .when(platforms: [.iOS])
-                    ),
+//                    .target(
+//                        name: "BlueStackDFPAdapter",
+//                        condition: .when(platforms: [.iOS])
+//                    ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
@@ -109,7 +109,7 @@ let package = Package(
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         //dfp
-//        .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
+        .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         //        .binaryTarget(name: "GoogleAppMeasurement", path: "Dependencies/GoogleAppMeasurement.xcframework"),
         //        .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "Dependencies/GoogleAppMeasurementIdentitySupport.xcframework"),
             .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
