@@ -19,6 +19,16 @@ let package = Package(
 //        .package(url: "https://github.com/smartadserver/Smart-Display-SDK-iOS.git", .upToNextMajor(from: "7.19.1"))
         //PromisesObjC
 //        .package(url: "https://github.com/google/promises.git", exact: "1.2.12"),
+        .package(
+             name: "GoogleAppMeasurement",
+             url: "https://github.com/google/GoogleAppMeasurement.git",
+             "7.0.0"..<"11.0.0"
+           ),
+           .package(
+             name: "GoogleUserMessagingPlatform",
+             url: "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+             "1.1.0"..<"3.0.0"
+           ),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -49,6 +59,9 @@ let package = Package(
                        .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                        .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
 //                       .product(name: "FBLPromises", package: "Promises"),
+                       .product(name: "GoogleAppMeasurement",
+                                package: "GoogleAppMeasurement"),
+                           .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
                      ],
              path: "BlueStackSDKWrapper",
              linkerSettings: [
