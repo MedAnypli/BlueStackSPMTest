@@ -67,7 +67,7 @@ let package = Package(
                     ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
-                    //                       .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
+                                           .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "nanopb", condition: .when(platforms: [.iOS])),
 //                    //                       .target(name: "UserMessagingPlatform", condition: .when(platforms: [.iOS])),
