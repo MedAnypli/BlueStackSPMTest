@@ -24,7 +24,7 @@ let package = Package(
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
 //                    "swift-package-manager-google-mobile-ads",
-                    .product(name: "swift-package-manager-google-mobile-ads", package: "A"),
+                    .product(name: "googleMobileAds", package: "A"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
