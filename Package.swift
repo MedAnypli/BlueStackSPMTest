@@ -48,7 +48,7 @@ let package = Package(
                     .target(name: "nanopb", condition: .when(platforms: [.iOS])),
                     .target(name: "UserMessagingPlatform", condition: .when(platforms: [.iOS])),
                     .target(name: "PromisesObjC",
-                            condition: .when(platforms: [.iOS]))
+                            condition: .when(platforms: [.iOS])),
                     //ogury
                         .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
