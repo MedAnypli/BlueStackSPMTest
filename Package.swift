@@ -70,7 +70,6 @@ let package = Package(
                     //                       .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "nanopb", condition: .when(platforms: [.iOS])),
-//                        .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
 //                    //                       .target(name: "UserMessagingPlatform", condition: .when(platforms: [.iOS])),
                     //ogury
                         .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
@@ -80,7 +79,6 @@ let package = Package(
 //                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
 //                    .product(name: "Promises",
 //                             package: "Promises"),
-//                    .product(name: "FBLPromises", package: "FBLPromises")
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
@@ -102,9 +100,6 @@ let package = Package(
                     .linkedLibrary("sqlite3")
                 ]
                ),
-//        .binaryTarget(name: "FBLPromises",
-//                path: "Dependencies/FBLPromises.xcframework"
-//               ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         //smart
@@ -113,7 +108,6 @@ let package = Package(
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
-//        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
         //        .binaryTarget(name: "GoogleAppMeasurement", path: "Dependencies/GoogleAppMeasurement.xcframework"),
         //        .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "Dependencies/GoogleAppMeasurementIdentitySupport.xcframework"),
             .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
