@@ -53,8 +53,8 @@ let package = Package(
                     //ogury
                         .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
-                    .product(name: "swift-package-manager-google-mobile-ads",
-                             package: "swift-package-manager-google-mobile-ads"),
+//                    .product(name: "swift-package-manager-google-mobile-ads",
+//                             package: "swift-package-manager-google-mobile-ads"),
                     //                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleUserMessagingPlatform"),
                     //                    .product(name: "Promises",
                     //                             package: "Promises"),
