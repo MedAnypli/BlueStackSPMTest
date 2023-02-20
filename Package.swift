@@ -14,12 +14,14 @@ let package = Package(
         //            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
     dependencies:  [
+        .package(url: "https://github.com/google/promises", from: "1.2.9")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
+                    "PromisesObjC",
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
@@ -47,8 +49,8 @@ let package = Package(
                     .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                     .target(name: "nanopb", condition: .when(platforms: [.iOS])),
                     .target(name: "UserMessagingPlatform", condition: .when(platforms: [.iOS])),
-                    .target(name: "PromisesObjC",
-                            condition: .when(platforms: [.iOS])),
+//                    .target(name: "PromisesObjC",
+//                            condition: .when(platforms: [.iOS])),
                     //ogury
                         .target(name: "BlueStackOguryAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Ogury", condition: .when(platforms: [.iOS])),
