@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies:  [
         .package(
-            name: "Promises",
+            name: "GoogleMobileAds",
             url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0")
     ],
     targets: [
@@ -24,7 +24,7 @@ let package = Package(
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
 //                    "swift-package-manager-google-mobile-ads",
-                    .product(name: "Promises", package: "GoogleMobileAds"),
+                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
