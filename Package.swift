@@ -14,15 +14,14 @@ let package = Package(
         //            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
     dependencies:  [
-        .package(name: "swift-package-manager-google-mobile-ads",
-                 url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0")
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
-                    "swift-package-manager-google-mobile-ads",
+                  //  "swift-package-manager-google-mobile-ads",
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
