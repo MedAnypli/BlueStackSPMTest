@@ -14,9 +14,10 @@ let package = Package(
         //            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
     dependencies:  [
-        .package(
-            name: "GoogleMobileAds",
-            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0")
+//        .package(
+//            name: "GoogleMobileAds",
+//            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0"),
+//        .package(url: "https://github.com/google/promises.git", from: "2.2.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -78,7 +79,6 @@ let package = Package(
                     .linkedFramework("Security"),
                     .linkedFramework("StoreKit"),
                     .linkedFramework("SystemConfiguration"),
-                    .linkedFramework("GoogleMobileAds"),
                     .linkedLibrary("ObjC"),
                     .linkedLibrary("c++"),
                     .linkedLibrary("z"),
@@ -89,7 +89,7 @@ let package = Package(
                 dependencies: [
                     "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
-                    "PromisesObjC",
+//                    "PromisesObjC",
 //                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
 //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
@@ -107,7 +107,7 @@ let package = Package(
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         //        .binaryTarget(name: "GoogleAppMeasurement", path: "Dependencies/GoogleAppMeasurement.xcframework"),
         //        .binaryTarget(name: "GoogleAppMeasurementIdentitySupport", path: "Dependencies/GoogleAppMeasurementIdentitySupport.xcframework"),
-//            .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
+            .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
 //                .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
 //                .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
             .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
