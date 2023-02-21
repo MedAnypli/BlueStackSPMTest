@@ -89,7 +89,7 @@ let package = Package(
                 ],
                 path: "BlueStackDFPAdapterWrapper",
                 linkerSettings: [
-                    .linkedLibrary("FBLPromises")
+                    .linkedLibrary("Promises")
                 ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
