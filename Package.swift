@@ -44,11 +44,13 @@ let package = Package(
                     //location
                     .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
+                    .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
+                     //comment for now because we need FBLPromises
                     //dfp
-                    .target(
-                        name: "BlueStackDFPAdapterWrapper",
-                        condition: .when(platforms: [.iOS])
-                    ),
+//                    .target(
+//                        name: "BlueStackDFPAdapterWrapper",
+//                        condition: .when(platforms: [.iOS])
+//                    ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
 //                    .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
@@ -116,6 +118,7 @@ let package = Package(
 //                .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
 //            .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
 //                .binaryTarget(name: "UserMessagingPlatform", path: "Dependencies/UserMessagingPlatform.xcframework"),
+            .binaryTarget(name: "BlueStackImproveAdapter", path: "BlueStackImproveAdapter.xcframework"),
         //fb
             .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
