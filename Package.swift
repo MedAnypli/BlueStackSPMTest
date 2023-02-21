@@ -90,7 +90,6 @@ let package = Package(
                     "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
                     "PromisesObjC",
-                    .product(name: "nanopb", package: "nanopb"),
 //                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
 //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
