@@ -79,6 +79,8 @@ let package = Package(
                     .linkedFramework("StoreKit"),
                     .linkedFramework("SystemConfiguration"),
                     .linkedFramework("GoogleMobileAds"),
+                    .linkedFramework("FBLPromises"),
+                    .linkedFramework("GoogleMobileAds"),
                     .linkedLibrary("ObjC"),
                     .linkedLibrary("c++"),
                     .linkedLibrary("z"),
