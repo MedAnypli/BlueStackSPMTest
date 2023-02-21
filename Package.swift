@@ -24,9 +24,7 @@ let package = Package(
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
 //                    "swift-package-manager-google-mobile-ads",
-                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
-//                    .target(name: "FBLPromises"),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
                     .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
@@ -44,7 +42,7 @@ let package = Package(
                     .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
                     //dfp
                     .target(
-                        name: "BlueStackDFPAdapter",
+                        name: "BlueStackDFPAdapterWrapper",
                         condition: .when(platforms: [.iOS])
                     ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
@@ -84,6 +82,11 @@ let package = Package(
                     .linkedLibrary("sqlite3")
                 ]
                ),
+        .target(name: "BlueStackDFPAdapterWrapper",
+                dependencies: [
+                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
+                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                ]),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         .target(name: "FBLPromises",
