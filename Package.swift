@@ -29,6 +29,8 @@ let package = Package(
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
                     .product(name: "FBLPromises", package: "Promises"),
+                    .product(name: "Promises", package: "Promises"),
+                    .product(name: "FBLPromisesTestHelpers", package: "Promises"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
