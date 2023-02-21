@@ -18,13 +18,14 @@ let package = Package(
 //            name: "GoogleMobileAds",
 //            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0"),
 //        .package(url: "https://github.com/google/promises.git", from: "2.2.0")
+        .package(url: "https://github.com/google/promises.git", branch: "master")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
-//                    "",
+                    "Promises",
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
