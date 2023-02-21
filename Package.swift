@@ -92,14 +92,17 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-                    "FBLPromises",
+//                    "FBLPromises",
                     "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
 //                    "PromisesObjC",
 //                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
 //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
-                path: "BlueStackDFPAdapterWrapper"
+                path: "BlueStackDFPAdapterWrapper",
+                linkerSettings: [
+                    .linkedLibrary("FBLPromises")
+                ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
