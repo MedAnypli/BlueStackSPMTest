@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "BlueStackSPMTest",
+    name: "BlueStackSDKWrapper",
     
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "BlueStackSPMTest",
+            name: "BlueStackSDKWrapper",
             targets: ["BlueStackSDKWrapper"]),
         //            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
@@ -26,6 +26,7 @@ let package = Package(
 //                    "swift-package-manager-google-mobile-ads",
                     .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
+              //      .target(name: "FBLPromises"),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
                     .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
@@ -85,6 +86,8 @@ let package = Package(
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
+        .target(name: "FBLPromises",
+               path: "Dependencies/FBLPromises"),
         //smart
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
