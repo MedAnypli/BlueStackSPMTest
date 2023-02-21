@@ -44,7 +44,7 @@ let package = Package(
                     //location
                     .target(name: "BlueStackLocationAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "MAdvertiseLocation", condition: .when(platforms: [.iOS])),
-                    .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
+//                    .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
                      //comment for now because we need FBLPromises
                     //dfp
 //                    .target(
