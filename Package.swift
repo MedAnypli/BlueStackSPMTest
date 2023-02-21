@@ -47,10 +47,10 @@ let package = Package(
 //                    .target(name: "BlueStackImproveAdapter", condition: .when(platforms: [.iOS])),
                      //comment for now because we need FBLPromises
                     //dfp
-//                    .target(
-//                        name: "BlueStackDFPAdapterWrapper",
-//                        condition: .when(platforms: [.iOS])
-//                    ),
+                    .target(
+                        name: "BlueStackDFPAdapterWrapper",
+                        condition: .when(platforms: [.iOS])
+                    ),
                     //                       .target(name: "GoogleAppMeasurement", condition: .when(platforms: [.iOS])),
                     //                       .target(name: "GoogleAppMeasurementIdentitySupport", condition: .when(platforms: [.iOS])),
 //                    .target(name: "GoogleMobileAds", condition: .when(platforms: [.iOS])),
