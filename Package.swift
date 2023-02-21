@@ -100,9 +100,9 @@ let package = Package(
 //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper",
-                linkerSettings: [
-                    .linkedLibrary("FBLPromises")
-                ]
+//                linkerSettings: [
+//                    .linkedLibrary("FBLPromises")
+//                ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
