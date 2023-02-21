@@ -19,7 +19,7 @@ let package = Package(
 //            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0"),
 //        .package(url: "https://github.com/google/promises.git", from: "2.2.0")
         .package(
-            name: "Promises",
+            name: "FBLPromises",
             url: "https://github.com/google/promises.git",
             branch: "master")
     ],
@@ -90,7 +90,7 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-                    "Promises",
+                    "FBLPromises",
                     "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
 //                    "PromisesObjC",
