@@ -64,8 +64,8 @@ let package = Package(
                 ],
                 path: "BlueStackSDKWrapper",
                 linkerSettings: [
-                    .linkedFramework("AudioToolbox"),
                     .linkedFramework("AVFoundation"),
+                    .linkedFramework("Accelerate"),
                     .linkedFramework("CFNetwork"),
                     .linkedFramework("CoreGraphics"),
                     .linkedFramework("CoreMedia"),
@@ -78,6 +78,8 @@ let package = Package(
                     .linkedFramework("Security"),
                     .linkedFramework("StoreKit"),
                     .linkedFramework("SystemConfiguration"),
+                    .linkedLibrary("ObjC"),
+                    .linkedLibrary("c++"),
                     .linkedLibrary("z"),
                     .linkedLibrary("sqlite3")
                 ]
