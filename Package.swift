@@ -26,7 +26,7 @@ let package = Package(
 //                    "swift-package-manager-google-mobile-ads",
                     .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
-                    .target(name: "FBLPromises"),
+//                    .target(name: "FBLPromises"),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
                     .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
