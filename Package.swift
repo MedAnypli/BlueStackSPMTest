@@ -88,7 +88,8 @@ let package = Package(
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
                     "BlueStackDFPAdapter" ,
-                    "GoogleMobileAds"
+                    "GoogleMobileAds",
+                    "PromisesObjC"
 //                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
 //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
@@ -109,7 +110,7 @@ let package = Package(
 //            .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
 //                .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
 //                .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
-//            .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
+            .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
 //                .binaryTarget(name: "UserMessagingPlatform", path: "Dependencies/UserMessagingPlatform.xcframework"),
         //fb
             .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
