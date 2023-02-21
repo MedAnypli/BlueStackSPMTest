@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "BlueStackSDKWrapper",
+    name: "BlueStackSPMTest",
     
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "BlueStackSDKWrapper",
+            name: "BlueStackSPMTest",
             targets: ["BlueStackSDKWrapper"]),
         //            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
