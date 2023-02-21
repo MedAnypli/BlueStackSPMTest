@@ -92,8 +92,8 @@ let package = Package(
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
-        .target(name: "FBLPromises",
-               path: "Dependencies/FBLPromises"),
+//        .target(name: "FBLPromises",
+//               path: "Dependencies/FBLPromises"),
         //smart
         .binaryTarget(name: "BlueStackSASAdapter", path: "BlueStackSASAdapter.xcframework"),
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
