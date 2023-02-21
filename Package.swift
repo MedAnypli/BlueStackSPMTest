@@ -18,7 +18,10 @@ let package = Package(
 //            name: "GoogleMobileAds",
 //            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0"),
 //        .package(url: "https://github.com/google/promises.git", from: "2.2.0")
-        .package(url: "https://github.com/google/promises.git", branch: "master")
+        .package(
+            name: "Promises"
+            url: "https://github.com/google/promises.git",
+            branch: "master")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
