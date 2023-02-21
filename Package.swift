@@ -78,7 +78,6 @@ let package = Package(
                     .linkedFramework("Security"),
                     .linkedFramework("StoreKit"),
                     .linkedFramework("SystemConfiguration"),
-                    .linkedFramework("Promises"),
                     .linkedLibrary("z"),
                     .linkedLibrary("sqlite3")
                 ]
@@ -88,7 +87,10 @@ let package = Package(
                     .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
-                path: "BlueStackDFPAdapterWrapper"
+                path: "BlueStackDFPAdapterWrapper",
+                linkerSettings: [
+                    .linkedFramework("Promises")
+                ]
                ),
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
