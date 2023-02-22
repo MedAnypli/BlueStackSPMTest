@@ -82,7 +82,7 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-                     "FBLPromises",
+                     "FBLPromisesLocal",
                     "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
                    // .product(name: "FBLPromises", package: "Promises"),
@@ -90,7 +90,8 @@ let package = Package(
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
-        .target(name: "FBLPromises",
+        //FBLPromisesLocal
+        .target(name: "FBLPromisesLocal",
                 path: "Sources/FBLPromises"
                ),
         //core
