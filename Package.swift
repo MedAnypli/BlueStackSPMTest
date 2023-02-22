@@ -83,10 +83,9 @@ let package = Package(
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
                      "FBLPromisesLocal",
-                    "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
                    // .product(name: "FBLPromises", package: "Promises"),
-                    //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                     .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
