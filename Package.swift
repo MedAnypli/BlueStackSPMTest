@@ -91,7 +91,7 @@ let package = Package(
                 path: "BlueStackDFPAdapterWrapper"
                ),
         .target(name: "FBLPromises",
-                path: "FBLPromises"
+                path: "Sources/FBLPromises"
                ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
