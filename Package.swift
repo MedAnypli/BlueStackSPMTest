@@ -82,13 +82,16 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-                     "Promises",
+                     "FBLPromises",
                     "BlueStackDFPAdapter" ,
                     "GoogleMobileAds",
-                    .product(name: "FBLPromises", package: "Promises"),
+                   // .product(name: "FBLPromises", package: "Promises"),
                     //                    .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
+               ),
+        .target(name: "FBLPromises",
+                path: "FBLPromises"
                ),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
