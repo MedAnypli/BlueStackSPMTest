@@ -90,6 +90,7 @@ let package = Package(
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
+        //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
         //smart
@@ -99,23 +100,27 @@ let package = Package(
         //adcolony
         .binaryTarget(name: "BlueStackAdColonyAdapter", path: "BlueStackAdColonyAdapter.xcframework"),
         .binaryTarget(name: "AdColony", path: "Dependencies/AdColony.xcframework"),
+        //criteo
         .binaryTarget(name: "BluestackCriteoAdapter", path: "BluestackCriteoAdapter.xcframework"),
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
-        .binaryTarget(name: "BlueStackImproveAdapter", path: "BlueStackImproveAdapter.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
-        .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
-        .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
-        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
-        //the dependencies
-        .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
-        .binaryTarget(name: "ImproveDigital", path: "Dependencies/ImproveDigital.xcframework"),
+        //location
+        .binaryTarget(name: "BlueStackLocationAdapter", path: "BlueStackLocationAdapter.xcframework"),
         .binaryTarget(name: "MAdvertiseLocation", path: "Dependencies/MAdvertiseLocation.xcframework"),
+        //ogury
+        .binaryTarget(name: "BlueStackOguryAdapter", path: "BlueStackOguryAdapter.xcframework"),
         .binaryTarget(name: "OguryAds", path: "Dependencies/OguryAds.xcframework"),
         .binaryTarget(name: "OguryChoiceManager", path: "Dependencies/OguryChoiceManager.xcframework"),
         .binaryTarget(name: "OMSDK_Ogury", path: "Dependencies/OMSDK_Ogury.xcframework"),
+        //amazon
+        .binaryTarget(name: "BluestackAmazonPublisherServicesAdapter", path: "BluestackAmazonPublisherServicesAdapter.xcframework"),
+        .binaryTarget(name: "DTBiOSSDK", path: "Dependencies/DTBiOSSDK.xcframework"),
+       //Improve
+        .binaryTarget(name: "BlueStackImproveAdapter", path: "BlueStackImproveAdapter.xcframework"),
+        .binaryTarget(name: "ImproveDigital", path: "Dependencies/ImproveDigital.xcframework"),
     ]
 )
