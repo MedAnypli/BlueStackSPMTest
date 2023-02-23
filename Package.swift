@@ -28,9 +28,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(name: "BlueStackSDKWrapper",
                 dependencies: [
-//                    .product(name: "FBLPromises", package: "Promises"),
-//                    .product(name: "Promises", package: "Promises"),
-//                    .product(name: "FBLPromisesTestHelpers", package: "Promises"),
+                    .product(name: "FBLPromises", package: "Promises"),
+                    .product(name: "Promises", package: "Promises"),
+                    .product(name: "FBLPromisesTestHelpers", package: "Promises"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
                     //smart
@@ -82,11 +82,9 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-//                     "FBLPromisesLocal",
                     "GoogleMobileAds",
-                   // .product(name: "FBLPromises", package: "Promises"),
+                    .product(name: "FBLPromises", package: "Promises"),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                     .target(name: "FBLPromisesLocal", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
