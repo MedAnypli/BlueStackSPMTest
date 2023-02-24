@@ -89,16 +89,17 @@ let package = Package(
 //                    .product(name: "GoogleUtilities", package: "GoogleMobileAds"),
 //                    .product(name: "GoogleAppMeasurement", package: "GoogleMobileAds"),
 //                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleMobileAds"),
+                    .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
+                    .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
+                    .target(name: "nanopb", condition: .when(platforms: [.iOS])),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
-                     .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
-                     .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
         //for dfp dependencies
         .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
         .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
-//        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
+        .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
