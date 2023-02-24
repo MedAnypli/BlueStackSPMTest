@@ -91,14 +91,14 @@ let package = Package(
 //                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleMobileAds"),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                      .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
+                     .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
-        //FBLPromisesLocal
-        .target(name: "FBLPromisesLocal",
-                path: "Sources/FBLPromises"
-               ),
+        //for dfp dependencies
         .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
+        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
+//        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
