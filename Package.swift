@@ -83,13 +83,14 @@ let package = Package(
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
 //                    "GoogleMobileAds",
-                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
+//                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
 //                    .product(name: "Promises", package: "GoogleMobileAds"),
 //                    .product(name: "nanopb", package: "GoogleMobileAds"),
 //                    .product(name: "GoogleUtilities", package: "GoogleMobileAds"),
 //                    .product(name: "GoogleAppMeasurement", package: "GoogleMobileAds"),
 //                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleMobileAds"),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
+                     .target(name: "PromisesObjC", condition: .when(platforms: [.iOS])),
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
@@ -97,6 +98,7 @@ let package = Package(
         .target(name: "FBLPromisesLocal",
                 path: "Sources/FBLPromises"
                ),
+        .binaryTarget(name: "PromisesObjC", path: "Dependencies/PromisesObjC.xcframework"),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
