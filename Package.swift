@@ -98,7 +98,7 @@ let package = Package(
         .target(name: "FBLPromisesLocal",
                 path: "Sources/FBLPromises"
                ),
-        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.framework"),
+        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
