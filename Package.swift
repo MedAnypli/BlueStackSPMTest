@@ -82,13 +82,6 @@ let package = Package(
                ),
         .target(name: "BlueStackDFPAdapterWrapper",
                 dependencies: [
-//                    "GoogleMobileAds",
-//                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
-//                    .product(name: "Promises", package: "GoogleMobileAds"),
-//                    .product(name: "nanopb", package: "GoogleMobileAds"),
-//                    .product(name: "GoogleUtilities", package: "Promises"),
-//                    .product(name: "GoogleAppMeasurement", package: "GoogleMobileAds"),
-//                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleMobileAds"),
                     .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
                     .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                     .target(name: "nanopb", condition: .when(platforms: [.iOS])),
