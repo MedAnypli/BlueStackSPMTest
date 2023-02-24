@@ -14,14 +14,14 @@ let package = Package(
         //            targets: ["BlueStackSDK" , "OMSDK_Madvertise", "BlueStackSASAdapter", "SASDisplayKit", "SCSCoreKit", "BluestackAmazonPublisherServicesAdapter", "DTBiOSSDK", "BlueStackLocationAdapter" ,"MAdvertiseLocation","BlueStackDFPAdapter","GoogleMobileAds"]),
     ],
     dependencies:  [
-                .package(
-                    name: "GoogleMobileAds",
-                    url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0"),
+//                .package(
+//                    name: "GoogleMobileAds",
+//                    url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "9.13.0"),
         //        .package(url: "https://github.com/google/promises.git", from: "2.2.0")
-//        .package(
-//            name: "Promises",
-//            url: "https://github.com/google/promises.git",
-//            branch: "master")
+        .package(
+            name: "Promises",
+            url: "https://github.com/google/promises.git",
+            branch: "master")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -86,11 +86,11 @@ let package = Package(
 //                    .product(name: "GoogleMobileAds", package: "GoogleMobileAds"),
 //                    .product(name: "Promises", package: "GoogleMobileAds"),
 //                    .product(name: "nanopb", package: "GoogleMobileAds"),
-//                    .product(name: "GoogleUtilities", package: "GoogleMobileAds"),
+                    .product(name: "GoogleUtilities", package: "Promises"),
 //                    .product(name: "GoogleAppMeasurement", package: "GoogleMobileAds"),
 //                    .product(name: "GoogleUserMessagingPlatform", package: "GoogleMobileAds"),
                     .target(name: "FBLPromises", condition: .when(platforms: [.iOS])),
-                    .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
+//                    .target(name: "GoogleUtilities", condition: .when(platforms: [.iOS])),
                     .target(name: "nanopb", condition: .when(platforms: [.iOS])),
                      .target(name: "BlueStackDFPAdapter", condition: .when(platforms: [.iOS])),
                 ],
