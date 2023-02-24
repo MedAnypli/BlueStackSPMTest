@@ -96,10 +96,6 @@ let package = Package(
                 ],
                 path: "BlueStackDFPAdapterWrapper"
                ),
-        //for dfp dependencies
-        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
-        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
-        .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
         //core
         .binaryTarget(name: "BlueStackSDK", path: "BlueStackSDK.xcframework"),
         .binaryTarget(name: "OMSDK_Madvertise", path: "OMSDK_Madvertise.xcframework"),
@@ -115,6 +111,10 @@ let package = Package(
         //dfp
         .binaryTarget(name: "BlueStackDFPAdapter", path: "BlueStackDFPAdapter.xcframework"),
         .binaryTarget(name: "GoogleMobileAds", path: "Dependencies/GoogleMobileAds.xcframework"),
+        //for dfp dependencies
+        .binaryTarget(name: "FBLPromises", path: "Dependencies/FBLPromises.xcframework"),
+        .binaryTarget(name: "GoogleUtilities", path: "Dependencies/GoogleUtilities.xcframework"),
+        .binaryTarget(name: "nanopb", path: "Dependencies/nanopb.xcframework"),
         //fb
         .binaryTarget(name: "BlueStackFacebookAdapter", path: "BlueStackFacebookAdapter.xcframework"),
         .binaryTarget(name: "FBAudienceNetwork", path: "Dependencies/FBAudienceNetwork.xcframework"),
