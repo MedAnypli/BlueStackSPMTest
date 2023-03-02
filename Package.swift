@@ -33,6 +33,8 @@ let package = Package(
 //                    .product(name: "FBLPromisesTestHelpers", package: "Promises"),
                     .target(name: "BlueStackSDK", condition: .when(platforms: [.iOS])),
                     .target(name: "OMSDK_Madvertise", condition: .when(platforms: [.iOS])),
+                    //fb
+                    .target(name: "BlueStackFacebookAdapter",condition: .when(platforms: [.iOS])),
                     //smart
                     .target(name: "BlueStackSASAdapter", condition: .when(platforms: [.iOS])),
                     .target(name: "SASDisplayKit", condition: .when(platforms: [.iOS])),
